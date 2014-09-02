@@ -37,6 +37,7 @@ This will return an object of all items in local storage where the **Type** = **
 We can then use the returned data in the follwing way, on its own or within a loop by just referencing the pseudo column name.
 
 `listItem[0].ListName;`
+
 `listItem[0].Key;`
 
 
