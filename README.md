@@ -32,7 +32,12 @@ This queries the index (returns a list of all items in local storage mapping on 
 
 `var listItem = offlineStorage.GetByType('list-item');`
 
-This will return an object of all items in local storage where the **Type** = **list-item**
+This will return an object of all items in local storage where the **Type** = **list-item**.
+
+We can then use the returned data in the follwing way, on its own or within a loop by just referencing the pseudo column name.
+
+`listItem[0].ListName;`
+`listItem[0].Key;`
 
 
 Filter
