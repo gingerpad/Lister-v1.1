@@ -38,3 +38,21 @@ This will return an object of all items in local storage where the **Type** = **
 Filter
 -------
 
+The **Filter** method allows you to pass an existing object/array along with a **query** (see below), to return a subset of the initial data, similar to a **where** clause.
+
+`var listItem = offlineStorage.GetByType('list-item');`
+			
+`var query = offlineStorage.Query("Key", guid);`		
+`listItem = offlineStorage.Filter(listItems, query);`
+
+This returns a subset of **list-item** where the **key** equals the guid/key sent through.
+
+Query
+--------
+
+As shown above, the **Query** method is a shortcut to create a query function that will iterate over itself to help return the subset data by passing a pseudo column and the value to compare against.
+
+`var queryParent = offlineStorage.Query("Parent", parent);`
+`counterArray = offlineStorage.Filter(counterArray, queryParent);`
+
+This returns a subset of the **counterArray** where the **Parent** psuedo column matches the value sent through.
