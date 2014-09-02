@@ -43,7 +43,7 @@ The **Filter** method allows you to pass an existing object/array along with a *
 `var listItem = offlineStorage.GetByType('list-item');`
 			
 `var query = offlineStorage.Query("Key", guid);`		
-`listItem = offlineStorage.Filter(listItems, query);`
+`listItem = offlineStorage.Filter(listItem, query);`
 
 This returns a subset of **list-item** where the **key** equals the guid/key sent through.
 
