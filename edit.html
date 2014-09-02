@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html manifest="/cache.manifest">
+<head>
+	<title>Lister</title>
+	<link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes">
+	
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="stylesheet" href="/bootstrap.css">
+	<link rel="stylesheet" href="/bootstrap-theme.css">
+	
+	<link rel="apple-touch-startup-image" href="/images/startup-portrait.png" media="(orientation:portrait)" />
+	<link rel="apple-touch-startup-image" href="/images/startup-landscape.png" media="(orientation:landscape)" />
+	
+	<script type="text/javascript" src="/jquery-1.10.2.min.js" ></script>
+	<script type="text/javascript" src="/bootstrap.min.js" ></script>
+	<script type="text/javascript" src="/jquery-ui.min.js" ></script>
+	<script type="text/javascript" src="/jquery.ui.touch-punch.min.js" ></script>
+	<script type="text/javascript" src="/simpleStorage.js" ></script>
+	<script type="text/javascript" src="/less-1.4.0.js" ></script>
+	<script type="text/javascript" src="/javascript.js" ></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row hdr">
+			<div class="col-md-12 online-status">
+				<span>Checking...</span>
+			</div>
+			<div class="col-md-12">
+				<ul class="nav nav-pills">
+					<li>
+						<a href="/"><span class="glyphicon glyphicon-home"></span>Home</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="row ui-content">	
+			<div class="col-md-12">
+				<div class="panel-group" id="Add-new-list">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4>Edit list</h4>
+						</div>
+						<div id="AddListForm" class="panel">
+							<div class="panel-body">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label for="text-edit-list-name" class="col-sm-2 control-label">List name</label>
+										<div class="col-sm-10">
+											<input type="text" name="text-edit-list-name" id="text-edit-list-name" class="form-control" value="" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="select-edit-list-color" class="col-sm-2 control-label">List color</label>
+										<div class="col-sm-10">
+											<select name="select-edit-list-color" id="select-edit-list-color" class="form-control">
+												<option value="#ffffff">None</option>
+												<option value="#ff0000">Red</option>
+												<option value="#ff8000">Orange</option>
+												<option value="#ffff00">Yellow</option>
+												<option value="#36d900">Green</option>
+												<option value="#0080ff">Blue</option>
+												<option value="#3600d9">Indigo</option>
+												<option value="#a300d9">Violet</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="col-sm-offset-2 col-sm-10">
+											<button class="btn-save-list btn btn-default">Save list</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 app-name">
+				<h6>Lister v.1.1a</h6>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="UpdateModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="myModalLabel">Update available</h4>
+					</div>
+					<div class="modal-body">
+						<p>An update is available, would you like to reload now?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-danger btn-update">Update</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
