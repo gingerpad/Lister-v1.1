@@ -53,6 +53,6 @@ Query
 As shown above, the **Query** method is a shortcut to create a query function that will iterate over itself to help return the subset data by passing a pseudo column and the value to compare against.
 
 `var queryParent = offlineStorage.Query("Parent", parent);`
-`counterArray = offlineStorage.Filter(counterArray, queryParent);`
+`counterArray = offlineStorage.Filter(counterArray, queryParent);` 
 
 This returns a subset of the **counterArray** where the **Parent** psuedo column matches the value sent through.
